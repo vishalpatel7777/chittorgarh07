@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* PAGE BACKGROUND */
+    --bg-body: #f1f3f8;
+
+    /* SURFACES */
+    --base: #ffffff;
+    --partition: #f1f3f8;
+
+    /* BORDERS */
+    --border-color: #d0dbebcc;
+    --lines: #dbe4f0;
+
+    /* STRIPES */
+    --stripes: #f8f9fa;
+    --stripes-dark: #f5f4fa;
+    --stripes-light: #fcfbfd;
+
+    /* TEXT */
+    --text-secondary: #5c5c5c;
+
+    /* TYPOGRAPHY */
+    --line-height-base: 1.8rem;
+  }
+
+  html,
+  body {
+    background-color: var(--bg-body);
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    line-height: var(--line-height-base);
+  }
+}
+
+/* index.css */
+@layer utilities {
+  .dashboard-container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;   /* bs-gutter-x / 2 */
+    padding-right: 1rem;
+  }
+
+  @media (max-width: 992px) {
+    .dashboard-container {
+      max-width: 94%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .dashboard-container {
+      max-width: 96%;
+    }
+  }
+}
+
+
