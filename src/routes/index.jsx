@@ -20,6 +20,12 @@ import IpoAllotmentStatusRoutes from "./ipo/LiveIpoInfo/IpoAllotmentStatus.route
 import BasisofAllotmentsIposRoutes from "./ipo/LiveIpoInfo/BasisofAllotmentsIpos.routes";
 
 
+// Learn about ipos
+import IpoReportsRoutes from "./ipo/LearnAboutIpos/IpoReports.routes";
+import IpoArticlesRoutes from "./ipo/LearnAboutIpos/IpoArticles.routes";
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -45,6 +51,11 @@ const router = createBrowserRouter([
           ...IposListingRoutes,
           ...IpoAllotmentStatusRoutes,
           ...BasisofAllotmentsIposRoutes,
+
+
+          // Learn about ipos
+          ...IpoReportsRoutes,
+          ...IpoArticlesRoutes,
         ],
       },
 

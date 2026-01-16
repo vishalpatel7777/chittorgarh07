@@ -14,6 +14,9 @@ const routes = [
   { id:10,label: "IPO Listing", path: "/ipos/ipolisting" },
   {id:11,label: "IPO Allotment Status", path: "/ipos/ipoallotmentstatus"},
   {id:12,label: "Basis of Allotments", path: "/ipos/basisofallotments"},
+  {id:13,label: "IPO Reports", path: "/ipos/reports"},
+  {id:14,label: "ebook Guide", path: "/ipos/ebookguide"},
+  {id:15,label: "IPO Articles", path: "/ipos/articles"}
 ];
 
 const Home = () => {
