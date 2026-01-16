@@ -3,7 +3,7 @@ import IpoDashboard from '@pages/ipo/MainboardIpoInfo/IpoDashboard'
 
 const IpoDashboardRoutes = [
   {
-    path: "ipos",
+    path: "ipos/dashboard",
     element: <IpoDashboard />,
     
   }

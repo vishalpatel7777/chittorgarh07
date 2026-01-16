@@ -25,6 +25,20 @@ import IpoReportsRoutes from "./ipo/LearnAboutIpos/IpoReports.routes";
 import IpoArticlesRoutes from "./ipo/LearnAboutIpos/IpoArticles.routes";
 
 
+// IPO performance Reports
+import IpoAnchorInvestorsRoutes from "./ipo/IpoPerformanceReports/IpoAnchorInvestors.routes";
+import IpoMerchantBankerRoutes from "./ipo/IpoPerformanceReports/IpoMerchantBanker.routes";
+import SmeIpoDashboardRoutes from "./smeIpo/SmeIpoInfo/SmeIpoDashboard.routes";
+import SmeUpcomingIpoRoutes from "./smeIpo/SmeIpoInfo/SmeUpcomingIpo.routes";
+import SmeIpoTimtableRoutes from "./smeIpo/SmeIpoInfo/SmeIpoTimtable.routes";
+import SmeIpoCalendarRoutes from "./smeIpo/SmeIpoInfo/SmeIpoCalendar.routes";
+import SmeIpoPerformanceRoutes from "./smeIpo/SmeIpoInfo/SmeIpoPerformance.routes";
+
+import SmeIpoSubscriptionRoutes from "./smeIpo/LiveIpoInfo/SmeIpoSubscription.routes";
+import SmeIpoReviewsRoutes from "./smeIpo/LiveIpoInfo/SmeIpoReviews.routes";
+import SmeIposListingRoutes from './smeIpo/LiveIpoInfo/SmeIposListing.routes';
+// import SmeIpoSubscriptionRoutes from './smeIpo/LiveIpoInfo/SmeIpoSubscription.routes';
+
 
 
 const router = createBrowserRouter([
@@ -37,6 +51,8 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <Home /> },
 
+
+         /*  Here the all the IPO routes...  */ 
           // IPO ROUTES (merged cleanly)
           ...CurrentIpoRoutes,
           ...UpcomingIpoRoutes,
@@ -56,6 +72,25 @@ const router = createBrowserRouter([
           // Learn about ipos
           ...IpoReportsRoutes,
           ...IpoArticlesRoutes,
+
+
+          // IPO performance Reports
+          ...IpoAnchorInvestorsRoutes,
+          ...IpoMerchantBankerRoutes,
+
+
+          /*Here the all SME IPO routes... */
+          ...SmeIpoDashboardRoutes,
+          ...SmeUpcomingIpoRoutes,
+          ...SmeIpoTimtableRoutes,
+          ...SmeIpoCalendarRoutes,
+          ...SmeIpoPerformanceRoutes,
+          
+          ...SmeIpoSubscriptionRoutes,
+          ...SmeIpoReviewsRoutes,
+          ...SmeIposListingRoutes,
+          ...SmeIpoSubscriptionRoutes,
+
         ],
       },
 

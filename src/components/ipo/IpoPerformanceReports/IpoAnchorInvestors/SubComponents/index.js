@@ -1,0 +1,6 @@
+export {AllIpos} from './AllIpos'
+export {MainboardIpos} from './MainboardIpos'
+export {SmeIpos} from './SmeIpos'
+export {MainboardFpos} from './MainboardFpos'
+export {SmeFpos} from './SmeFpos'
+

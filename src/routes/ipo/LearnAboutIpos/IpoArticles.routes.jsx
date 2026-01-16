@@ -1,5 +1,6 @@
 import IpoArticles from '@pages/ipo/LearnAboutIpos/IpoArticles'
 import IpoArticlesTabLayout from   '@components/ipo/LearnAboutIpos/IpoArticles/IpoArticlesTabLayout'
+import IpoMessageBoard from '@pages/ipo/LearnAboutIpos/IpoMessageBoard'
 import {
   StockBrokers, MainboardIpo , SmeIpo , Ncd , CityInfo , HistoryAndTourism , OptionsTrading , NriTrading , Sponsored , Miscellaneous
 } from  '@components/ipo/LearnAboutIpos/IpoArticles/SubComponents'
@@ -27,7 +28,10 @@ const IpoArticlesRoutes = [
         ],
       },
     ],
-  },
+  },{
+    path:"ipos/message",
+    element: <IpoMessageBoard/>
+  }
  
 ];
 
