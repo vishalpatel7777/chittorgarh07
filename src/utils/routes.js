@@ -32,6 +32,12 @@ export const smeRoutes = [
   { id: 10, label: "SME IPO Listing", path: "/sme-ipos/ipolisting/sme" },
    { id: 11, label: "IPO Allotment Status", path: "/sme-ipos/ipoallotmentstatus/sme" },
   { id: 12, label: "Basis of Allotments", path: "/sme-ipos/basisofallotments/sme" },
-  { id: 13, label: "IPO Reports", path: "/sme-ipos/reports/sme" },
+  { id: 13, label: "IPO Reports", path: "/sme-ipos/reports" },
   { id: 14, label: "ebook Guide", path: "/sme-ipos/ebookguide" },
+   { id: 15, label: "IPO Articles", path: "/sme-ipos/articles/smeipo" },
+  { id: 16, label: "IPO Message Board", path: "/sme-ipos/message" },
+  { id: 17, label: "IPO Anchor Investors", path: "/sme-ipos/ipoanchorinvestors/sme" },
+  { id: 18, label: "IPO Merchant Banker", path: "/sme-ipos/ipomerchantbanker/sme" },
+  { id: 19, label: "NSE SME Share Prices", path: "/sme-ipos/nseprice" },
+  { id: 20, label: "BSE SME Share Prices", path: "/sme-ipos/bseprice" },  
 ];

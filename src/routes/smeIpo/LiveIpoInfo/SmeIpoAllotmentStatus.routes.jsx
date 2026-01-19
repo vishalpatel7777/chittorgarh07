@@ -7,9 +7,9 @@ import {
   SmeIpos,
 } from '@components/ipo/LiveIpoInfo/IpoAllotmentStatus/SubComponents'
 
-const IpoSubscriptionRoutes = [
+const SmeIpoAllotmentStatusRoutes = [
   {
-    path: "ipos/ipoallotmentstatus",
+    path: "/sme-ipos/ipoallotmentstatus",
     element: <IpoAllotmentStatus />,
     children: [
       {
@@ -25,11 +25,11 @@ const IpoSubscriptionRoutes = [
     ],
   },
   {
-    path : "ipos",
+    path : "/sme-ipos/smedashboard",
     element : <IpoDashboard/>
   }
 
 ];
 
 
-export default IpoSubscriptionRoutes;
+export default SmeIpoAllotmentStatusRoutes;

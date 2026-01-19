@@ -37,9 +37,17 @@ import SmeIpoPerformanceRoutes from "./smeIpo/SmeIpoInfo/SmeIpoPerformance.route
 import SmeIpoSubscriptionRoutes from "./smeIpo/LiveIpoInfo/SmeIpoSubscription.routes";
 import SmeIpoReviewsRoutes from "./smeIpo/LiveIpoInfo/SmeIpoReviews.routes";
 import SmeIposListingRoutes from './smeIpo/LiveIpoInfo/SmeIposListing.routes';
+import SmeIpoAllotmentStatusRoutes from "./smeIpo/LiveIpoInfo/SmeIpoAllotmentStatus.routes";
 // import SmeIpoSubscriptionRoutes from './smeIpo/LiveIpoInfo/SmeIpoSubscription.routes';
+import SmeBasisofAllotmentsIposRoutes from "./smeIpo/LiveIpoInfo/smeBasisofAllotmentsIpos.routes";
 
+import SmeIpoReportsRoutes from "./smeIpo/LearnAboutSmeIpo/SmeIpoReports.routes";
+import SmeIpoArticlesRoutes from "./smeIpo/LearnAboutSmeIpo/SmeIpoArticles.routes";
+import NseSharePricesRoutes from "./smeIpo/LearnAboutSmeIpo/NseSharePrices.routes";
+import BseSharePricesRoutes from "./smeIpo/LearnAboutSmeIpo/BseSharePrices.routes";
 
+import SmeIpoAnchorInvestorsRoutes from "./smeIpo/SmeIpoPerformanceReports/SmeIpoAnchorInvestors.routes";
+import SmeIpoMerchantBankerRoutes from "./smeIpo/SmeIpoPerformanceReports/SmeIpoMerchantBanker.routes";
 
 const router = createBrowserRouter([
   {
@@ -90,6 +98,21 @@ const router = createBrowserRouter([
           ...SmeIpoReviewsRoutes,
           ...SmeIposListingRoutes,
           ...SmeIpoSubscriptionRoutes,
+          ...SmeIpoAllotmentStatusRoutes,
+          ...SmeBasisofAllotmentsIposRoutes,
+
+          ...SmeIpoReportsRoutes,
+          ...SmeIpoArticlesRoutes,
+          ...NseSharePricesRoutes,
+          ...BseSharePricesRoutes,
+
+          ...SmeIpoAnchorInvestorsRoutes,
+          ...SmeIpoMerchantBankerRoutes,
+
+
+
+          /* here all the NCD / RI / BB / OFS */
+          
 
         ],
       },
