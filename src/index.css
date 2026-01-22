@@ -1,28 +1,66 @@
 @import "tailwindcss";
 
+/* =========================================================
+   ROOT DESIGN TOKENS (BOOTSTRAP-COMPATIBLE + CUSTOM)
+   ========================================================= */
 @layer base {
   :root {
-    /* PAGE BACKGROUND */
+    /* ================= PAGE ================= */
     --bg-body: #f1f3f8;
 
-    /* SURFACES */
+    /* ================= SURFACES ================= */
     --base: #ffffff;
     --partition: #f1f3f8;
 
-    /* BORDERS */
+    /* ================= BORDERS / LINES ================= */
     --border-color: #d0dbebcc;
     --lines: #dbe4f0;
+    --line-color: #dbe4f0; /* alias used by table cells */
 
-    /* STRIPES */
+    /* ================= TABLE ================= */
+    --table-head-bg: #f8f9fa;
+    --table-hover-bg: rgba(0, 0, 0, 0.04); /* exact Bootstrap hover */
+    --table-striped-bg: #fafbfe;
+
+    /* ================= STRIPES ================= */
     --stripes: #f8f9fa;
     --stripes-dark: #f5f4fa;
     --stripes-light: #fcfbfd;
 
-    /* TEXT */
+    /* ================= TEXT ================= */
+    --text-primary: #1e1e27;
     --text-secondary: #5c5c5c;
+    --text-muted: #6c757d;
 
-    /* TYPOGRAPHY */
+    /* ================= LINKS ================= */
+    --link: #2163e8;
+
+    /* ================= STATUS ================= */
+    --success: #0cbc87;
+    --danger: #d6293e;
+
+    /* ================= SHADOWS ================= */
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+    /* ================= TYPOGRAPHY ================= */
+    --font-size-base: 15px;
     --line-height-base: 1.8rem;
+
+    /* =================================================
+       BOOTSTRAP VARIABLE ALIASES (CRITICAL)
+       ================================================= */
+    --bs-body-bg: var(--bg-body);
+    --bs-body-color: var(--text-primary);
+
+    --bs-border-color: var(--border-color);
+
+    --bs-gray-400: #d0d4d9;
+    --bs-gray-600: var(--text-muted);
+    --bs-gray-700: #29292e;
+
+    --bs-primary: var(--link);
+    --bs-success: var(--success);
+    --bs-danger: var(--danger);
   }
 
   html,
@@ -35,16 +73,21 @@
 
   body {
     line-height: var(--line-height-base);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-/* index.css */
+/* =========================================================
+   LAYOUT UTILITIES
+   ========================================================= */
 @layer utilities {
   .dashboard-container {
     max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;   /* bs-gutter-x / 2 */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -61,4 +104,126 @@
   }
 }
 
+/* =========================================================
+   TABLE SYSTEM (BOOTSTRAP-EXACT)
+   ========================================================= */
+@layer utilities {
+  .data-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border-color);
+    background: var(--base);
+    font-size: var(--font-size-base);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
 
+  .table-light {
+    background-color: var(--table-head-bg);
+  }
+
+  .table-hover tbody tr:hover {
+    background-color: var(--table-hover-bg);
+  }
+
+  .table-striped tbody tr:nth-child(even) {
+    background-color: var(--table-striped-bg);
+  }
+
+  .sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+
+  .table-head {
+    padding: 0.65rem 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: top;
+    border-bottom: 2px solid var(--border-color);
+    border-right: 1px solid var(--line-color);
+  }
+
+  .table-cell {
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid var(--line-color);
+    border-right: 1px solid var(--line-color);
+    vertical-align: middle;
+  }
+
+  .table-head:last-child,
+  .table-cell:last-child {
+    border-right: none;
+  }
+}
+
+/* =========================================================
+   FORM CONTROLS (form-control-sm)
+   ========================================================= */
+@layer utilities {
+  .input-sm {
+    font-size: 12px;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    outline: none;
+    background: #fff;
+  }
+
+  .input-sm:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+  }
+}
+
+/* =========================================================
+   TEXT & LINKS
+   ========================================================= */
+@layer utilities {
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .text-link {
+    color: var(--link);
+  }
+
+  .text-link:hover {
+    text-decoration: underline;
+  }
+
+  .text-success {
+    color: var(--success);
+  }
+
+  .text-danger {
+    color: var(--danger);
+  }
+}
+
+/* =========================================================
+   SCROLLBAR (INSPECT-MATCHED)
+   ========================================================= */
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    backdrop-filter: blur(4px);
+    background: rgba(180, 180, 180, 0.25);
+    border-radius: 20px;
+    transition: all 0.3s;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 180, 255, 0.6);
+    box-shadow: 0 0 8px rgba(0, 200, 255, 0.6);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}

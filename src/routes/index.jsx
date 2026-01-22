@@ -49,6 +49,29 @@ import BseSharePricesRoutes from "./smeIpo/LearnAboutSmeIpo/BseSharePrices.route
 import SmeIpoAnchorInvestorsRoutes from "./smeIpo/SmeIpoPerformanceReports/SmeIpoAnchorInvestors.routes";
 import SmeIpoMerchantBankerRoutes from "./smeIpo/SmeIpoPerformanceReports/SmeIpoMerchantBanker.routes";
 
+
+import CurrentNdcIssuesRoutes from "./NCD/NcdIssue/CurrentNcdIssues.routes";
+import NcdReviewRoutes from "./NCD/NcdIssue/NcdReview.routes";
+import NcdSubscriptionRoutes from "./NCD/NcdIssue/NcdSubscription.routes";
+import NcdCalanderRoutes from "./NCD/NcdIssue/NcdCalander.routes";
+import NcdGlossaryRoutes from "./NCD/NcdIssue/NcdGlossary.routes";
+
+import CurrentRisRoutes from "./NCD/RightsIssue/CurrentRis.routes";
+import RiReviewsRoutes from "./NCD/RightsIssue/RiReviews.routes";
+import RightIssueCalendarRoutes from "./NCD/RightsIssue/RightIssueCalendar.routes";
+import RightsIssueSubscriptionRoutes from "./NCD/RightsIssue/RightsIssueSubscription.routes";
+import RiGlossaryRoutes from "./NCD/RightsIssue/RiGlossary.routes";
+import CurrentBuybackRoutes from "./NCD/Buyback/CurrentBuyback.routes";
+import BuybackCalendarRoutes from "./NCD/Buyback/BuybackCalendar.routes";
+
+
+import CurrentOfsRoutes from '@routes/NCD/OfferForSale/CurrentOfs.routes'
+
+import MutualFundsRoutes from "./MutualFunds/MutualFunds.routes";
+
+
+import TopStockBrokersInIndiaRoutes from "./BrokerReviews/TopStockBrokersInIndia.routes";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -112,8 +135,33 @@ const router = createBrowserRouter([
 
 
           /* here all the NCD / RI / BB / OFS */
-          
+          ...CurrentNdcIssuesRoutes,
+          ...NcdReviewRoutes,
+          ...NcdSubscriptionRoutes,
+          ...NcdCalanderRoutes,
+          ...NcdGlossaryRoutes,
 
+
+          ...CurrentRisRoutes,
+          ...RiReviewsRoutes,
+          ...RightIssueCalendarRoutes,
+          ...RightsIssueSubscriptionRoutes,
+          ...RiGlossaryRoutes,
+
+          ...CurrentBuybackRoutes,
+          ...BuybackCalendarRoutes,
+
+          ...CurrentOfsRoutes,
+
+
+
+      /* Mutual Funds route placeholder */
+          ...MutualFundsRoutes,
+
+
+
+          /* Here all Broker Reviews routes  */
+          ...TopStockBrokersInIndiaRoutes,          
         ],
       },
 

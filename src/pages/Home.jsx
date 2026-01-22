@@ -1,6 +1,6 @@
 import React from "react";
 import RouteList from '@routes/RouteList';
-import { mainboardRoutes, smeRoutes } from  '@utils/routes'
+import { mainboardRoutes, smeRoutes , ncdRoutes , mutualFundsRoutes , brokerReviewsRoutes} from  '@utils/routes'
 
 const Home = () => {
   return (
@@ -14,6 +14,22 @@ const Home = () => {
         title="SME IPO Routes"
         routes={smeRoutes}
       />
+
+      <RouteList
+        title="NCD Routes"
+        routes={ncdRoutes}
+      />
+
+      <RouteList
+        title="Mutual Funds Routes"
+        routes={mutualFundsRoutes}
+      />
+
+      <RouteList 
+        title="Broker Reviews Routes"
+        routes={brokerReviewsRoutes}
+      />
+
     </main>
   );
 };

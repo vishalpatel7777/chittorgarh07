@@ -41,3 +41,36 @@ export const smeRoutes = [
   { id: 19, label: "NSE SME Share Prices", path: "/sme-ipos/nseprice" },
   { id: 20, label: "BSE SME Share Prices", path: "/sme-ipos/bseprice" },  
 ];
+
+
+export const ncdRoutes = [
+  {id:1 , label: "Current NCD Issues", path: "/ncd/current" },
+  {id:2 , label: "NCD Review", path: "/ncd/review" },
+  {id:3 , label: "NCD Subscription Status", path: "/ncd/subscription" },
+  {id:4 , label: "NCD Calendar", path: "/ncd/calendar" },
+  {id:5 , label: "Ebook NCD Guide", path: "/ncd/ebookguide" },
+  {id:6 , label: "NCD Glossary", path: "/ncd/glossary" },
+  {id:7 , label: "NCD Articles", path: "/sme-ipos/articles/ncd" },
+
+  {id:8 , label: "Current Rights Issues", path: "/ncd/rights-issue" },
+  {id:9 , label: "RI Reviews", path: "/ncd/ri-reviews" },
+  {id:10 , label: "Rights isue Calendar", path: "/ncd/rights-issue-calendar" },
+  {id:11 , label: "Rights Issue Subscription", path: "/ncd/rights-issue-subscription" },
+  {id:12, label: "Ebook RI Guide", path: "/ncd/ebook-ri-guide" },
+  {id:13, label: "RI Glossary", path: "ncd/riglossary/rightsissue" },
+  {id:14 , label:"Current Buyback Offers", path: "/ncd/currentbuyback" },
+  {id:15 , label:"Buyback Calendar", path: "/ncd/buyback/calendar" },
+  {id:16, label:"Ebook Buyback Guide", path: "/ncd/buyback/ebookguide" },
+  {id:17, label:"Current OFS", path: "/ncd/ofs" },
+
+];
+
+
+
+export  const mutualFundsRoutes = [
+  { id: 1, label: "Mutual Funds", path: "/mutualfunds" },
+];
+
+export const brokerReviewsRoutes = [
+  { id: 1, label: "Top Stock Brokers in India", path: "/broker-reviews/topstockbrokersinindia" },
+];

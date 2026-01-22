@@ -1,0 +1,48 @@
+export const RightIssueSubscriptionData = [
+  {
+    id: 1,
+    company: "Silgo Retail Limited",
+    link: "/rights-issue-subscription/silgo-retail-rights-issue-2026",
+    closeDate: "Feb 04, 2026",
+    bidDate: "Jan 21, 2026",
+    issueAmount: 44.29,
+    bidQty: "1,04,159",
+    subscription: 0.01,
+    highlight: true,
+  },
+  {
+    id: 2,
+    company: "Vineet Laboratories Limited",
+    link: "/rights-issue-subscription/vineet-laboratories-rights-issue-2025",
+    closeDate: "Jan 30, 2026",
+    bidDate: "Jan 21, 2026",
+    issueAmount: 29.96,
+    bidQty: "27,05,742",
+    subscription: 0.27,
+    highlight: true,
+  },
+  {
+    id: 3,
+    company: "Yug Decor Ltd",
+    link: "/rights-issue-subscription/yug-decor-rights-issue-2025",
+    closeDate: "Jan 23, 2026",
+    bidDate: "Jan 21, 2026",
+    issueAmount: 5.39,
+    bidQty: "63,46,275",
+    subscription: 1.18,
+    highlight: true,
+  },
+
+  // ---- dummy rows for pagination ----
+  ...Array.from({ length: 27 }, (_, i) => ({
+    id: i + 4,
+    company: `Sample Company ${i + 4}`,
+    link: "#",
+    closeDate: "Jan 15, 2026",
+    bidDate: "Jan 15, 2026",
+    issueAmount: (10 + i).toFixed(2),
+    bidQty: `${(i + 1) * 123456}`,
+    subscription: (Math.random() * 2).toFixed(2),
+    highlight: false,
+  })),
+];

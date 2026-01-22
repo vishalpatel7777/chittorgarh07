@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 import IPOHeader from '@components/ipo/MainboardIpoInfo/currentIpos/IPOHeader'
 import NseSharePriceCard from '@components/smeIpo/LearnAboutSmeIpo/NseSharePrices/NseSharePriceCard'
 import FAQLayout from '@components/common/faq/FAQLayout'
-import NseMiddle from '../../../components/smeIpo/LearnAboutSmeIpo/NseSharePrices/NseMiddle'
+import NseMiddle from '@components/smeIpo/LearnAboutSmeIpo/NseSharePrices/NseMiddle'
 
 const NseSharePrices = () => {
   return (

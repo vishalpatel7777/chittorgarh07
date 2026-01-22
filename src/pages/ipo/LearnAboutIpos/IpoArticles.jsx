@@ -24,8 +24,9 @@ const IpoArticles = () => {
       {/* <IpoHeader/> */}
     
       {/* sub component  */}
-       <div  className="
-          "><Outlet /></div>
+       <div  className="">
+        <Outlet />
+          </div>
         
       <div className="grid grid-cols-12 gap-4 mt-6">
             {/* FAQ - 9 columns */}

@@ -4,7 +4,7 @@ import {
   MainboardIpos,
   SmeIpos,
 } from '@components/ipo/LiveIpoInfo/IpoSubscription/SubComponents'
-import RedirectToGmp from '../../../components/ipo/LiveIpoInfo/RedirectToGmp/RedirectToGmp';
+import RedirectToGmp from '@components/ipo/LiveIpoInfo/RedirectToGmp/RedirectToGmp';
 const IpoSubscriptionRoutes = [
   {
     path: "ipos/iposubscription",

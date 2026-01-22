@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import FAQLayout from "@components/common/faq/FAQLayout";
-import IpoAllotmentStatusMainboardCard from "../../../components/ipo/LiveIpoInfo/IpoAllotmentStatus/IpoAllotmentStatusMainboardCard";
+import IpoAllotmentStatusMainboardCard from "@components/ipo/LiveIpoInfo/IpoAllotmentStatus/IpoAllotmentStatusMainboardCard";
 
 const IpoAllotmentStatus = () => {
   return (
