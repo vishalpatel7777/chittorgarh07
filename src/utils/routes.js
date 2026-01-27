@@ -73,4 +73,12 @@ export  const mutualFundsRoutes = [
 
 export const brokerReviewsRoutes = [
   { id: 1, label: "Top Stock Brokers in India", path: "/broker-reviews/topstockbrokersinindia" },
+  { id: 2, label: "Top Discount Stock Brokers", path: "/broker-reviews/topdiscountstockbrokers" },
+  { id: 3, label: "Top Full-Service Brokers", path: "/broker-reviews/topfullservicebrokers" },
+  { id: 4, label: "Lifetime Free Demat Account Brokers", path: "/broker-reviews/lifetimefreedemat" },
+  {id:5 , label: "Best Broker for Beginners", path: "/broker-reviews/bestbrokerforbeginners" },
+  {id:6 , label: "Best API Broker", path: "/broker-reviews/bestapibroker" },
+  {id:7 , label: "More Reports", path: "/broker-reviews/morereports" },
+  {id:8, label: "Zerodha", path: "/broker-reviews/Zerodha" },
+
 ];

@@ -1,0 +1,76 @@
+export const LifetimeFreeDematAcctData = {
+  title: "Lifetime Free Demat Account (Demat Account without AMC)",
+
+  rows: [
+    {
+      broker: "ProStocks",
+      openingFee: "Rs 0 (Free)",
+      amc: "Rs 0 (Lifetime Free)",
+      ctaLink: "https://www.prostocks.com/?ref=cipl",
+      reviewLink: "/stockbroker/prostocks/38/",
+    },
+    {
+      broker: "Dhan",
+      openingFee: "Rs 0 (Free)",
+      amc: "Rs 0 (Lifetime Zero AMC)",
+      ctaLink: "",
+      reviewLink: "/stockbroker/dhan/176/",
+    },
+    {
+      broker: "Paytm Money",
+      openingFee: "Rs 0 (Free)",
+      amc: "Rs 0 (Lifetime Free)",
+      ctaLink: "https://tinyurl.com/broker-paytm",
+      reviewLink: "/stockbroker/paytm-money/175/",
+    },
+    {
+      broker: "Fyers",
+      openingFee: "Rs 0 (Free)",
+      amc: "Rs 0 (Free AMC for Lifetime)",
+      ctaLink: "https://tinyurl.com/broker-fyers",
+      reviewLink: "/stockbroker/fyers_securities/32/",
+    },
+    {
+      broker: "Groww",
+      openingFee: "Rs 0 (Free)",
+      amc: "Rs 0 (Free)",
+      ctaLink: "https://tinyurl.com/broker-groww",
+      reviewLink: "/stockbroker/groww/173/",
+    },
+    {
+      broker: "Zerodha",
+      openingFee: "Rs 0 (Free)",
+      amc: "Rs 0 (Free)",
+      ctaLink: "https://tinyurl.com/broker-zerodha",
+      reviewLink: "/stockbroker/zerodha/18/",
+    },
+    {
+      broker: "Upstox",
+      openingFee: "Rs 0 (Free)",
+      amc: "Rs 0 (Free)",
+      ctaLink: "https://tinyurl.com/broker-upstox",
+      reviewLink: "/stockbroker/upstox/33/",
+    },
+    {
+      broker: "Angel One",
+      openingFee: "Rs 0 (Free)",
+      amc: "Rs 0 (Free)",
+      ctaLink: "https://tinyurl.com/broker-angelone",
+      reviewLink: "/stockbroker/angel-broking/14/",
+    },
+    {
+      broker: "ICICIdirect",
+      openingFee: "Rs 0 (Free)",
+      amc: "Rs 0 (Free)",
+      ctaLink: "",
+      reviewLink: "/stockbroker/icicidirect/1/",
+    },
+    {
+      broker: "5paisa",
+      openingFee: "Rs 0 (Free)",
+      amc: "Rs 0 (Free)",
+      ctaLink: "https://tinyurl.com/broker-5paisa",
+      reviewLink: "/stockbroker/5paisa/162/",
+    },
+  ],
+};

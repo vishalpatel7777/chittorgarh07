@@ -71,6 +71,17 @@ import MutualFundsRoutes from "./MutualFunds/MutualFunds.routes";
 
 
 import TopStockBrokersInIndiaRoutes from "./BrokerReviews/TopStockBrokersInIndia.routes";
+import TopDiscountBrokersRoutes from "./BrokerReviews/TopDiscountBrokers.routes";
+import TopFullServiceBrokersRoutes from "./BrokerReviews/TopFullServiceBrokers.routes"; 
+import LifetimeFreeDematAcctRoutes from "./BrokerReviews/LifetimeFreeDematAcct.routes";
+import BestBrokerforBeginnersRoutes from "./BrokerReviews/BestBrokerforBeginners.routes";
+import BestApiBrokerRoutes from "./BrokerReviews/BestApiBroker.routes";
+import MoreReportsRoutes from "./BrokerReviews/MoreReports.routes";
+
+
+
+import ZerodhaRoutes from "./BrokerReviews/DiscountBrokerReview/Zerodha.routes";
+
 
 const router = createBrowserRouter([
   {
@@ -161,7 +172,19 @@ const router = createBrowserRouter([
 
 
           /* Here all Broker Reviews routes  */
-          ...TopStockBrokersInIndiaRoutes,          
+          ...TopStockBrokersInIndiaRoutes,   
+          ...TopDiscountBrokersRoutes, 
+          ...TopFullServiceBrokersRoutes , 
+          ...LifetimeFreeDematAcctRoutes, 
+          ...BestBrokerforBeginnersRoutes, 
+          ...BestApiBrokerRoutes,
+          ...MoreReportsRoutes,
+
+
+          ...ZerodhaRoutes,
+
+
+          
         ],
       },
 
