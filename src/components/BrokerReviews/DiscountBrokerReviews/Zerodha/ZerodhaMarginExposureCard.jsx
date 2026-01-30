@@ -21,57 +21,43 @@ const ZerodhaMarginExposureCard = () => {
       </p>
 
       {/* ================= TABLE ================= */}
-      <div className="overflow-x-auto mb-4">
-        <table className="w-full border border-gray-200 text-sm">
-          <thead className="bg-gray-100">
+      <div className="overflow-x-auto mb-3 border rounded-xl p-1 border-[#d0dbebcc]">
+        <table className="w-full text-sm border-separate border-spacing-0">
+          <thead className="sticky top-0 bg-white">
             <tr>
-              <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+              <th className="px-4 py-3 text-left font-semibold text-gray-800">
                 Segment
               </th>
-              <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+              <th className="px-4 py-3 text-left font-semibold text-gray-800">
                 Margin
               </th>
-              <th className="border border-gray-200 px-3 py-2 text-left font-semibold">
+              <th className="px-4 py-3 text-left font-semibold text-gray-800">
                 Leverage
               </th>
             </tr>
           </thead>
 
           <tbody>
-            <tr className="hover:bg-gray-50">
-              <td className="border border-gray-200 px-3 py-2">
-                Equity Delivery
-              </td>
-              <td className="border border-gray-200 px-3 py-2">
-                100% of trade value for T+5 days
-              </td>
-              <td className="border border-gray-200 px-3 py-2">
-                1x
-              </td>
+            <tr className="odd:bg-gray-50 even:bg-white">
+              <td className="px-4 py-3">Equity Delivery</td>
+              <td className="px-4 py-3">100% of trade value for T+5 days</td>
+              <td className="px-4 py-3">1x</td>
             </tr>
 
-            <tr className="hover:bg-gray-50">
-              <td className="border border-gray-200 px-3 py-2">
-                Equity Intraday
-              </td>
-              <td className="border border-gray-200 px-3 py-2">
-                Up to 20% of trade value
-              </td>
-              <td className="border border-gray-200 px-3 py-2">
-                5x
-              </td>
+            <tr className="odd:bg-gray-50 even:bg-white">
+              <td className="px-4 py-3">Equity Intraday</td>
+              <td className="px-4 py-3">Up to 20% of trade value</td>
+              <td className="px-4 py-3">5x</td>
             </tr>
 
-            <tr className="hover:bg-gray-50">
-              <td className="border border-gray-200 px-3 py-2">
+            <tr className="odd:bg-gray-50 even:bg-white">
+              <td className="px-4 py-3">
                 F&amp;O (Equity, Currency and Commodities)
               </td>
-              <td className="border border-gray-200 px-3 py-2">
+              <td className="px-4 py-3">
                 100% of NRML margin (Span + Exposure + Delivery margin)
               </td>
-              <td className="border border-gray-200 px-3 py-2">
-                1x
-              </td>
+              <td className="px-4 py-3">1x</td>
             </tr>
           </tbody>
         </table>

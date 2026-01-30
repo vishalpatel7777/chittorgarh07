@@ -1,8 +1,20 @@
 import { NavLink, Outlet, useMatch } from "react-router-dom";
 import ZerodhaOverviewSection from "@components/BrokerReviews/DiscountBrokerReviews/Zerodha/ZerodhaOverviewSection";
-import ZerodhaAccountOpeningContent from '@components/BrokerReviews/DiscountBrokerReviews/Zerodha/Brokerage/ZerodhaAccountOpeningContent'
+import ZerodhaAccountOpeningContent from "@components/BrokerReviews/DiscountBrokerReviews/Zerodha/Brokerage/ZerodhaAccountOpeningContent";
 import ZerodhaBrokerIntro from "./MobileApp/ZerodhaBrokerIntro";
 import ZerodhaAccountChargesAndFAQ from "./AccountOpening/ZerodhaAccountChargesAndFAQ";
+import ZerodhaBrokerageCalculator from "./Calculator/ZerodhaBrokerageCalculator";
+import ZerodhaDemat from "./Demat/ZerodhaDemat";
+import ZerodhaIpo from "./Ipo/ZerodhaIpo";
+import ZerodhaBranches from "./Branches/ZerodhaBranches";
+import ZerodhaTradingSoftware from "./TradingSoftware/ZerodhaTradingSoftware";
+import ZerodhaNriAccount from "./NriAccount/ZerodhaNriAccount";
+import ZerodhaMutualFund from "./MutualFund/ZerodhaMutualFund";
+import ZerodhaIsItSafe from "./IsItSafe/ZerodhaIsItSafe";
+import ZerodhaApi from "./ZerodhaApi/ZerodhaApi";
+import ZerodhaComplaints from "./Complaints/ZerodhaComplaints";
+import ZerodhaFaqs from "./Faqs/ZerodhaFaqs";
+
 
 const tabs = [
   { label: "Review", path: "" },
@@ -26,9 +38,22 @@ const ZerodhaTabLayout = () => {
   const isReviewTab = useMatch("/broker-reviews/zerodha");
   const isBrokerageTab = useMatch("/broker-reviews/zerodha/brokerage");
   const isMobileAppTab = useMatch("/broker-reviews/zerodha/mobileapp");
-  const isAccountOpeningTab = useMatch("/broker-reviews/zerodha/accountopening");
- 
-
+  const isAccountOpeningTab = useMatch(
+    "/broker-reviews/zerodha/accountopening"
+  );
+  const isCalculatorTab = useMatch("/broker-reviews/zerodha/calculator");
+  const isDematTab = useMatch("/broker-reviews/zerodha/demat");
+  const isIpoTab = useMatch("/broker-reviews/zerodha/ipo");
+  const isBranchesTab = useMatch("/broker-reviews/zerodha/branches");
+  const isTradingSoftwareTab = useMatch(
+    "/broker-reviews/zerodha/tradingsoftware"
+  );
+  const isNriAccountTab = useMatch("/broker-reviews/zerodha/nriaccount");
+  const isMutualFundTab = useMatch("/broker-reviews/zerodha/mutualfund");
+  const isIsItSafeTab = useMatch("/broker-reviews/zerodha/isitsafe");
+  const isApiTab = useMatch("/broker-reviews/zerodha/api");
+  const isComplaintsTab = useMatch("/broker-reviews/zerodha/complaints");
+  const isFaqsTab = useMatch("/broker-reviews/zerodha/faqs");
 
 
   return (
@@ -37,7 +62,7 @@ const ZerodhaTabLayout = () => {
       <div className="mb-4 rounded-2xl bg-white p-10 shadow-sm">
         {/* Tabs */}
         <nav className="mb-6 flex flex-wrap gap-3">
-          {tabs.map(tab => (
+          {tabs.map((tab) => (
             <NavLink
               key={tab.label}
               to={tab.path}
@@ -57,10 +82,22 @@ const ZerodhaTabLayout = () => {
 
         {/* ✅ Overview ONLY on Review tab */}
         {isReviewTab && <ZerodhaOverviewSection />}
-        {isBrokerageTab && 
-        <ZerodhaAccountOpeningContent />}
+        {isBrokerageTab && <ZerodhaAccountOpeningContent />}
         {isMobileAppTab && <ZerodhaBrokerIntro />}
-        {isAccountOpeningTab && <ZerodhaAccountChargesAndFAQ/ >}
+        {isAccountOpeningTab && <ZerodhaAccountChargesAndFAQ />}
+        {isCalculatorTab && <ZerodhaBrokerageCalculator />}
+
+        {isDematTab && <ZerodhaDemat />}
+        {isIpoTab && <ZerodhaIpo />}
+        {isBranchesTab && <ZerodhaBranches />}
+        {isTradingSoftwareTab && <ZerodhaTradingSoftware />}
+        {isNriAccountTab && <ZerodhaNriAccount />}  
+        {isMutualFundTab && <ZerodhaMutualFund />}
+        {isIsItSafeTab && <ZerodhaIsItSafe />}
+        {isApiTab && <ZerodhaApi />}
+        {isComplaintsTab && <ZerodhaComplaints />}
+        {isFaqsTab && <ZerodhaFaqs />}
+
       </div>
 
       {/* ❌ Everything else is OUTSIDE the card */}

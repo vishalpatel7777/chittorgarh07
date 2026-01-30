@@ -16,7 +16,7 @@ const MoreReports = () => {
           className="text-sm"
         >
           Other Reports
-        </Link>
+        </Link> 
       </div>
       <h1 className="text-xl font-bold">Stock Broker Reports List</h1>
       <MoreReportsCard />

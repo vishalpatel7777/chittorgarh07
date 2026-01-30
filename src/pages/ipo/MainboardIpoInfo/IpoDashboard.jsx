@@ -32,6 +32,8 @@ import { smeIpoDocuments } from "@data/ipo/MainboardIpoInfo/Ipo_Dashboard/index"
 import { mainboardIpoDocuments } from "@data/ipo/MainboardIpoInfo/Ipo_Dashboard/index";
 import MainboardIpoDocuments from "@components/ipo/MainboardIpoInfo/IpoDashboard/MainBoard/MainboardIpoDocuments";
 
+import api from "@/lib/api";
+
 const DATA_MAP = {
   mainboard: {
     ipos: mainboardIpos,
@@ -54,6 +56,10 @@ const IpoDashboard = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  //api stuff
+  const [mainboardIpoApiData, setMainboardIpoApiData] = useState([]);
+  const [loadingIpos, setLoadingIpos] = useState(false);
+
   const TOP_TABLE_IDS = ["ipos", "reviews", "subscription", "performance"];
   const BOTTOM_TABLE_IDS = ["basisOfAllotment", "eventCalendar"];
 
@@ -67,10 +73,62 @@ const IpoDashboard = () => {
 
   const summary = SUMMARY_MAP[activeTab];
 
-  
+  // // useeffect for api
+  // useEffect(() => {
+  //   if (activeTab !== "mainboard") return;
+
+  //   const fetchMainboardIpos = async () => {
+  //     try {
+  //       setLoadingIpos(true);
+
+  //       const response = await api.get("/ipos/mainboard");
+
+  //       // assuming backend returns { success, data }
+  //       setMainboardIpoApiData(response.data.data);
+  //     } catch (error) {
+  //       console.error("Failed to fetch mainboard IPOs", error);
+  //     } finally {
+  //       setLoadingIpos(false);
+  //     }
+  //   };
+
+  //   fetchMainboardIpos();
+  // }, [activeTab]);
+
+  // with his api : gazi's api😶
+  useEffect(() => {
+    if (activeTab !== "mainboard") return;
+
+    const fetchMainboardIpos = async () => {
+      try {
+        setLoadingIpos(true);
+
+        const response = await api.get("https://sebi-api.onrender.com/ipos", {
+          params: { page: 1, limit: 50 },
+          headers: {
+            "x-api-key": "123456789",
+          },
+        });
+
+        const mappedData = response.data.data.map((row) => ({
+          company: row.company_name,
+          issueDate: row.filing_date, // already formatted (e.g. "Jun 08, 2004")
+          linkKey: row.pdf_url,
+        }));
+
+        setMainboardIpoApiData(mappedData);
+      } catch (error) {
+        console.error("Failed to fetch mainboard IPOs", error);
+      } finally {
+        setLoadingIpos(false);
+      }
+    };
+
+    fetchMainboardIpos();
+  }, [activeTab]);
 
   return (
-    <div className="dashboard-container pb-12">
+    <div className="p-12 pb-12">
       <h1 className="text-2xl font-semibold text-black">
         IPO Dashboard ({activeTab === "mainboard" ? "Mainboard" : "SME"})
       </h1>
@@ -132,10 +190,23 @@ const IpoDashboard = () => {
         {TABLE_CONFIGS[activeTab]
           .filter((cfg) => TOP_TABLE_IDS.includes(cfg.id))
           .map((cfg) => (
+            // <IpoTableCard
+            //   key={cfg.id}
+            //   config={cfg}
+            //   data={DATA_MAP[activeTab][cfg.id]}
+            // />
+
             <IpoTableCard
               key={cfg.id}
               config={cfg}
-              data={DATA_MAP[activeTab][cfg.id]}
+              data={
+                activeTab === "mainboard" && cfg.id === "ipos"
+                  ? mainboardIpoApiData
+                  : DATA_MAP[activeTab][cfg.id]
+              }
+              loading={
+                activeTab === "mainboard" && cfg.id === "ipos" && loadingIpos
+              }
             />
           ))}
       </div>

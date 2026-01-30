@@ -1,17 +1,76 @@
-
 import React from "react";
 
 const complaintData = [
-  { exchange: "BSE", year: "2025-26", clients: 6008383, complaints: 16, percent: "0.0003%" },
-  { exchange: "NSE", year: "2025-26", clients: 6852086, complaints: 683, percent: "0.01%" },
-  { exchange: "BSE", year: "2024-25", clients: 6671991, complaints: 223, percent: "0.0033%" },
-  { exchange: "NSE", year: "2024-25", clients: 7888964, complaints: 1075, percent: "0.01%" },
-  { exchange: "BSE", year: "2023-24", clients: 5749732, complaints: 217, percent: "0%" },
-  { exchange: "NSE", year: "2023-24", clients: 7392836, complaints: 567, percent: "0%" },
-  { exchange: "BSE", year: "2022-23", clients: 4362520, complaints: 127, percent: "0%" },
-  { exchange: "NSE", year: "2022-23", clients: 6392902, complaints: 446, percent: "0%" },
-  { exchange: "BSE", year: "2021-22", clients: 3316769, complaints: 46, percent: "0%" },
-  { exchange: "NSE", year: "2021-22", clients: 6277434, complaints: 543, percent: "0%" },
+  {
+    exchange: "BSE",
+    year: "2025-26",
+    clients: 6008383,
+    complaints: 16,
+    percent: "0.0003%",
+  },
+  {
+    exchange: "NSE",
+    year: "2025-26",
+    clients: 6852086,
+    complaints: 683,
+    percent: "0.01%",
+  },
+  {
+    exchange: "BSE",
+    year: "2024-25",
+    clients: 6671991,
+    complaints: 223,
+    percent: "0.0033%",
+  },
+  {
+    exchange: "NSE",
+    year: "2024-25",
+    clients: 7888964,
+    complaints: 1075,
+    percent: "0.01%",
+  },
+  {
+    exchange: "BSE",
+    year: "2023-24",
+    clients: 5749732,
+    complaints: 217,
+    percent: "0%",
+  },
+  {
+    exchange: "NSE",
+    year: "2023-24",
+    clients: 7392836,
+    complaints: 567,
+    percent: "0%",
+  },
+  {
+    exchange: "BSE",
+    year: "2022-23",
+    clients: 4362520,
+    complaints: 127,
+    percent: "0%",
+  },
+  {
+    exchange: "NSE",
+    year: "2022-23",
+    clients: 6392902,
+    complaints: 446,
+    percent: "0%",
+  },
+  {
+    exchange: "BSE",
+    year: "2021-22",
+    clients: 3316769,
+    complaints: 46,
+    percent: "0%",
+  },
+  {
+    exchange: "NSE",
+    year: "2021-22",
+    clients: 6277434,
+    complaints: 543,
+    percent: "0%",
+  },
 ];
 
 const ZerodhaComplaints = () => {
@@ -24,21 +83,29 @@ const ZerodhaComplaints = () => {
 
       {/* Description */}
       <p className="mb-3 text-sm leading-relaxed text-gray-700">
-        The number of <strong>Zerodha customer complaint</strong> received by the
-        exchanges. The Zerodha consumer complaint report helps understanding the
-        Zerodha quality and reliability of service.
+        The number of <strong>Zerodha customer complaint</strong> received by
+        the exchanges. The Zerodha consumer complaint report helps understanding
+        the Zerodha quality and reliability of service.
       </p>
 
       {/* Table */}
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr className="border-b border-gray-200 bg-gray-50 text-center">
-              <th className="px-2 py-2 font-medium text-gray-700">Exchange</th>
-              <th className="px-2 py-2 font-medium text-gray-700">Financial Year</th>
-              <th className="px-2 py-2 font-medium text-gray-700">Number of Clients*</th>
-              <th className="px-2 py-2 font-medium text-gray-700">Complaints**</th>
-              <th className="px-2 py-2 font-medium text-gray-700">%</th>
+      <div className="overflow-x-auto mb-3 border rounded-xl p-1 border-[#d0dbebcc]">
+        <table className="w-full text-sm border-separate border-spacing-0">
+          <thead className="sticky top-0 bg-white">
+            <tr className="text-center">
+              <th className="px-4 py-3 font-semibold text-gray-800">
+                Exchange
+              </th>
+              <th className="px-4 py-3 font-semibold text-gray-800">
+                Financial Year
+              </th>
+              <th className="px-4 py-3 font-semibold text-gray-800">
+                Number of Clients*
+              </th>
+              <th className="px-4 py-3 font-semibold text-gray-800">
+                Complaints**
+              </th>
+              <th className="px-4 py-3 font-semibold text-gray-800">%</th>
             </tr>
           </thead>
 
@@ -46,13 +113,13 @@ const ZerodhaComplaints = () => {
             {complaintData.map((row, index) => (
               <tr
                 key={index}
-                className="border-b border-gray-100 text-center last:border-b-0"
+                className="odd:bg-gray-50 even:bg-white text-center"
               >
-                <td className="px-2 py-2 text-gray-800">{row.exchange}</td>
-                <td className="px-2 py-2 text-gray-800">{row.year}</td>
-                <td className="px-2 py-2 text-gray-800">{row.clients}</td>
-                <td className="px-2 py-2 text-gray-800">{row.complaints}</td>
-                <td className="px-2 py-2 text-gray-800">{row.percent}</td>
+                <td className="px-4 py-3 text-gray-700">{row.exchange}</td>
+                <td className="px-4 py-3 text-gray-700">{row.year}</td>
+                <td className="px-4 py-3 text-gray-700">{row.clients}</td>
+                <td className="px-4 py-3 text-gray-700">{row.complaints}</td>
+                <td className="px-4 py-3 text-gray-700">{row.percent}</td>
               </tr>
             ))}
           </tbody>
@@ -64,7 +131,8 @@ const ZerodhaComplaints = () => {
         * The number of active customers reported by the broker.
       </p>
       <p className="text-xs text-gray-600 italic">
-        ** The total number of complaints received against the broker at the given exchange.
+        ** The total number of complaints received against the broker at the
+        given exchange.
       </p>
 
       {/* Link */}

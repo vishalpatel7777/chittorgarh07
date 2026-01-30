@@ -10,7 +10,7 @@ const App = () => {
     <div className="min-h-screen flex flex-col">
       {/* <Navbar  /> */}
       {/* <IpoCalendarMainboardContent /> */}
-      <div className="flex-grow bg-partition text-secondary leading-base">
+      <div className=" box-border w-[calc(100%-48px)] px-6 mx-auto grow bg-partition text-secondary leading-base">
         <Outlet />
         {/* <IpoSubscription /> */}
       </div>

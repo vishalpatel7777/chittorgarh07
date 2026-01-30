@@ -69,24 +69,32 @@ const ZerodhaKnowledgeLinks = () => {
       </h2>
 
       {/* Inner bordered box */}
-      <div className="rounded-lg border border-blue-200 p-4">
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-          {links.map((item, index) => (
-            <a
-              key={index}
-              href={item.href}
-              className="block rounded-md bg-blue-50 px-3 py-2 text-sm font-medium text-blue-700 hover:bg-blue-100"
-            >
-              <span>{item.title}</span>
-              {item.meta && (
-                <span className="ml-1 font-normal text-gray-600">
-                  – {item.meta}
-                </span>
-              )}
-            </a>
-          ))}
-        </div>
-      </div>
+    <div className="rounded-xl border border-[#d0dbebcc] p-2">
+  <div className="grid grid-cols-1 md:grid-cols-2">
+    {links.map((item, index) => {
+      const pairIndex = Math.floor(index / 2)
+      const isGray = pairIndex % 2 === 1
+
+      return (
+        <a
+          key={index}
+          href={item.href}
+          className={`block px-4 py-3 text-sm font-medium text-blue-700 hover:underline
+            ${isGray ? "bg-gray-50" : "bg-white"}
+          `}
+        >
+          <span>{item.title}</span>
+          {item.meta && (
+            <span className="ml-1 font-normal text-gray-600">
+              – {item.meta}
+            </span>
+          )}
+        </a>
+      )
+    })}
+  </div>
+</div>
+
     </div>
   );
 };

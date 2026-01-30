@@ -80,5 +80,6 @@ export const brokerReviewsRoutes = [
   {id:6 , label: "Best API Broker", path: "/broker-reviews/bestapibroker" },
   {id:7 , label: "More Reports", path: "/broker-reviews/morereports" },
   {id:8, label: "Zerodha", path: "/broker-reviews/Zerodha" },
-
+  {id:9 , label: "ProStocks" , path: "/broker-reviews/ProStocks" },
+  
 ];

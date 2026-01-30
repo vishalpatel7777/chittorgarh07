@@ -1,12 +1,36 @@
 import React from "react";
 
 const ratings = [
-  { label: "Overall Rating", value: 3.6, img: "https://www.chittorgarh.net/images/starimages/3.6.gif" },
-  { label: "Fees", value: 3.6, img: "https://www.chittorgarh.net/images/starimages/3.6.gif" },
-  { label: "Brokerage", value: 4.2, img: "https://www.chittorgarh.net/images/starimages/4.2.gif" },
-  { label: "Usability", value: 3.6, img: "https://www.chittorgarh.net/images/starimages/3.6.gif" },
-  { label: "Customer Service", value: 3.4, img: "https://www.chittorgarh.net/images/starimages/3.4.gif" },
-  { label: "Research Capabilities", value: 2.8, img: "https://www.chittorgarh.net/images/starimages/2.8.gif" },
+  {
+    label: "Overall Rating",
+    value: 3.6,
+    img: "https://www.chittorgarh.net/images/starimages/3.6.gif",
+  },
+  {
+    label: "Fees",
+    value: 3.6,
+    img: "https://www.chittorgarh.net/images/starimages/3.6.gif",
+  },
+  {
+    label: "Brokerage",
+    value: 4.2,
+    img: "https://www.chittorgarh.net/images/starimages/4.2.gif",
+  },
+  {
+    label: "Usability",
+    value: 3.6,
+    img: "https://www.chittorgarh.net/images/starimages/3.6.gif",
+  },
+  {
+    label: "Customer Service",
+    value: 3.4,
+    img: "https://www.chittorgarh.net/images/starimages/3.4.gif",
+  },
+  {
+    label: "Research Capabilities",
+    value: 2.8,
+    img: "https://www.chittorgarh.net/images/starimages/2.8.gif",
+  },
 ];
 
 const ZerodhaRatings = () => {
@@ -18,18 +42,15 @@ const ZerodhaRatings = () => {
       </h2>
 
       {/* Table */}
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
+      <div className="overflow-x-auto mb-3 border rounded-xl p-1 border-[#d0dbebcc]">
+        <table className="w-full text-sm border-separate border-spacing-0">
           <tbody>
             {ratings.map((item) => (
-              <tr
-                key={item.label}
-                className="border-b border-gray-100 last:border-b-0"
-              >
-                <td className="py-2 pr-4 font-medium text-gray-700">
+              <tr key={item.label} className="odd:bg-gray-50 even:bg-white">
+                <td className="px-4 py-3 font-medium text-gray-700">
                   {item.label}
                 </td>
-                <td className="py-2">
+                <td className="px-4 py-3">
                   <div className="flex items-center gap-2">
                     <img
                       src={item.img}

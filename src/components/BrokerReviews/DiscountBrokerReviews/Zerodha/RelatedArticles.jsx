@@ -2,7 +2,7 @@ import React from "react";
 
 const RelatedArticles = () => {
   return (
-    <div className="mb-4 rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+    <div className="mb-4 mt-3 rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
       {/* Title */}
       <h2 className="mb-3 text-lg font-semibold text-gray-900">
         Related articles
@@ -34,7 +34,7 @@ const RelatedArticles = () => {
           <a
             href="/article/minimum_brokerage_charged_by_share_brokers/93/"
             title="Minimum Brokerage Charges explained with examples"
-            className="text-blue-600 hover:underline"
+            className="text-blue-A600 hover:underline"
           >
             Minimum Brokerage Charges explained with examples
           </a>

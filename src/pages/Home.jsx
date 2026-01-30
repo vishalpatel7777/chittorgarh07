@@ -5,25 +5,25 @@ import { mainboardRoutes, smeRoutes , ncdRoutes , mutualFundsRoutes , brokerRevi
 const Home = () => {
   return (
     <main className="max-w-5xl mx-auto p-6">
-      {/* <RouteList
+      <RouteList
         title="Mainboard IPO Routes"
         routes={mainboardRoutes}
       />
-
+{/* 
       <RouteList
         title="SME IPO Routes"
         routes={smeRoutes}
       /> */}
 
-      <RouteList
+      {/* <RouteList
         title="NCD Routes"
         routes={ncdRoutes}
-      />
+      /> */}
 
-      <RouteList
+      {/* <RouteList
         title="Mutual Funds Routes"
         routes={mutualFundsRoutes}
-      />
+      /> */}
 
       <RouteList 
         title="Broker Reviews Routes"

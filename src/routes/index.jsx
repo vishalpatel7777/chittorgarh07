@@ -81,6 +81,8 @@ import MoreReportsRoutes from "./BrokerReviews/MoreReports.routes";
 
 
 import ZerodhaRoutes from "./BrokerReviews/DiscountBrokerReview/Zerodha.routes";
+import ProstocksRoutes from "./BrokerReviews/DiscountBrokerReview/Prostocks.routes";
+
 
 
 const router = createBrowserRouter([
@@ -182,6 +184,7 @@ const router = createBrowserRouter([
 
 
           ...ZerodhaRoutes,
+          ...ProstocksRoutes,
 
 
           
