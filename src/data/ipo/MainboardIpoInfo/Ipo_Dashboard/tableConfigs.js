@@ -10,11 +10,11 @@ export const TABLE_CONFIGS = {
         { key: "company", label: "Company", link: true },
         { key: "issueDate", label: "Issue Date", align: "center" },
         {
-          key: "pdfnames",
+          key: "pdfUrl",
           label: "Download",
           align: "right",
           type: "external-link",
-          linkKey: "pdfurls",
+          linkKey: "pdfUrl",
         },
       ],
       moreLink: "/report/mainboard-ipo-list-in-india-bse-nse/83/",

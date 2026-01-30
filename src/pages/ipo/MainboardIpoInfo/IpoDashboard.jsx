@@ -73,29 +73,7 @@ const IpoDashboard = () => {
 
   const summary = SUMMARY_MAP[activeTab];
 
-  // // useeffect for api
-  // useEffect(() => {
-  //   if (activeTab !== "mainboard") return;
-
-  //   const fetchMainboardIpos = async () => {
-  //     try {
-  //       setLoadingIpos(true);
-
-  //       const response = await api.get("/ipos/mainboard");
-
-  //       // assuming backend returns { success, data }
-  //       setMainboardIpoApiData(response.data.data);
-  //     } catch (error) {
-  //       console.error("Failed to fetch mainboard IPOs", error);
-  //     } finally {
-  //       setLoadingIpos(false);
-  //     }
-  //   };
-
-  //   fetchMainboardIpos();
-  // }, [activeTab]);
-
-  // with his api : gazi's api😶
+  // useeffect for api
   useEffect(() => {
     if (activeTab !== "mainboard") return;
 
@@ -103,20 +81,10 @@ const IpoDashboard = () => {
       try {
         setLoadingIpos(true);
 
-        const response = await api.get("https://sebi-api.onrender.com/ipos", {
-          params: { page: 1, limit: 50 },
-          headers: {
-            "x-api-key": "123456789",
-          },
-        });
+        const response = await api.get("/ipos/mainboard");
 
-        const mappedData = response.data.data.map((row) => ({
-          company: row.company_name,
-          issueDate: row.filing_date, // already formatted (e.g. "Jun 08, 2004")
-          linkKey: row.pdf_url,
-        }));
-
-        setMainboardIpoApiData(mappedData);
+        // assuming backend returns { success, data }
+        setMainboardIpoApiData(response.data.data);
       } catch (error) {
         console.error("Failed to fetch mainboard IPOs", error);
       } finally {
@@ -126,6 +94,38 @@ const IpoDashboard = () => {
 
     fetchMainboardIpos();
   }, [activeTab]);
+
+  // with his api : gazi's api😶
+  // useEffect(() => {
+  //   if (activeTab !== "mainboard") return;
+
+  //   const fetchMainboardIpos = async () => {
+  //     try {
+  //       setLoadingIpos(true);
+
+  //       const response = await api.get("https://sebi-api.onrender.com/ipos", {
+  //         params: { page: 1, limit: 50 },
+  //         headers: {
+  //           "x-api-key": "123456789",
+  //         },
+  //       });
+
+  //       const mappedData = response.data.data.map((row) => ({
+  //         company: row.company_name,
+  //         issueDate: row.filing_date, // already formatted (e.g. "Jun 08, 2004")
+  //         pdfUrl: row.pdf_url,
+  //       }));
+
+  //       setMainboardIpoApiData(mappedData);
+  //     } catch (error) {
+  //       console.error("Failed to fetch mainboard IPOs", error);
+  //     } finally {
+  //       setLoadingIpos(false);
+  //     }
+  //   };
+
+  //   fetchMainboardIpos();
+  // }, [activeTab]);
 
   return (
     <div className="p-12 pb-12">
